@@ -1,3 +1,4 @@
+import { mostrarRegistro } from "./registro.js";
 import { supabase } from "./supabase.js"; 
 
 export function mostrarLogin() {
