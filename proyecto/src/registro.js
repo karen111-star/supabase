@@ -1,3 +1,5 @@
+
+
 import { supabase } from './supabase.js';
 import { mostrarLogin } from './login.js'; // Para volver al login luego del registro
 

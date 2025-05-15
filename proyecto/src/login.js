@@ -23,6 +23,10 @@ document.querySelector("#btn-registro").addEventListener("click",
 mostrarRegistro);
 }
 
+document.getElementById('btn-registro').addEventListener('click', ()=> {
+mostrarRegistro();
+});
+
 async function handleLogin(event) {
 event.preventDefault();
 const email = document.querySelector("#email").value;
