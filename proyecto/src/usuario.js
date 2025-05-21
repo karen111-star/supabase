@@ -1,4 +1,5 @@
 import { supabase } from './supabase.js';
+import { mostrarAdministrador } from './administrador.js'; // Asegúrate de importar esta función
 
 export async function mostrarDatos() {
   const app = document.getElementById('app');
@@ -33,6 +34,7 @@ export async function mostrarDatos() {
       <label>Nombre: <input id="nombre" value="${usuario.nombre || ''}" /></label><br/>
       <label>Correo: <input id="correo" value="${usuario.correo || ''}" /></label><br/>
       <label>Fecha de nacimiento: <input type="date" id="fechaNacimiento" value="${usuario.fecha_nacimiento || ''}" /></label><br/>
+      
       <label>Teléfono: <input id="telefono" value="${usuario.telefono || ''}" /></label><br/>
       <label>Rol: ${usuario.roll || ''}</label><br/>
       <button id="btn-guardar">Guardar cambios</button>
@@ -49,6 +51,8 @@ export async function mostrarDatos() {
       <hr/>
       <h2>Quiero cerrar sesión</h2>
       <button id="btn-cerrar-sesion">Cerrar sesión</button>
+      
+      ${usuario.roll === "admin" ? `<button id="btn-administrador">Administrador</button>` : ""}
       <br/><br/><br/><br/><br/>
     </div>
   `;
@@ -131,4 +135,12 @@ export async function mostrarDatos() {
     await supabase.auth.signOut();
     location.reload(); // recarga la app
   });
+
+  // Administrador - Solo añadir evento si el botón existe
+  const btnAdmin = document.getElementById('btn-administrador');
+  if (btnAdmin) {
+    btnAdmin.addEventListener('click', async () => {
+      await mostrarAdministrador();
+    });
+  }
 }

@@ -1,5 +1,6 @@
 import { mostrarLogin } from "./login.js";
 import { supabase } from "./supabase.js";
+import { mostrarDatos } from "./usuario.js";
 
 
 
@@ -302,3 +303,4 @@ window.actualizarIconoFavorito = actualizarIconoFavorito;
 window.mostrarFavoritos = mostrarFavoritos;
 window.mostrarAleatorio = mostrarAleatorio;
 window.mostrarAlbum = mostrarAlbum;
+window.mostrarDatos = mostrarDatos;
