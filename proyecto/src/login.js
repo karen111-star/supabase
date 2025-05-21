@@ -19,13 +19,9 @@ document.querySelector("#app").innerHTML = `
 
 document.querySelector("#login-form").addEventListener("submit",
 handleLogin);
-document.querySelector("#btn-registro").addEventListener("click",
-mostrarRegistro);
+document.querySelector("#btn-registro").addEventListener("click", mostrarRegistro);
 }
 
-document.getElementById('btn-registro').addEventListener('click', ()=> {
-mostrarRegistro();
-});
 
 async function handleLogin(event) {
 event.preventDefault();
