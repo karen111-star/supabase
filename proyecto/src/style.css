@@ -1,0 +1,99 @@
+/* 🔹 Centrar todo el contenido en la pantalla */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1280px;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.card {
+    padding: 2em;
+    background: #333;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+button {
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+    border: none;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #ff0000;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #b71c1c;
+}
+
+/* 🔹 Barra de navegación inferior centrada */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+    background: #242424;
+    padding: 0.8em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    z-index: 100;
+}
+
+.bottom-nav button {
+    flex-grow: 1;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    background: #ff0000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.bottom-nav button:hover {
+    background: #b71c1c;
+}
+
+/* 📱 Estilos Responsivos */
+@media (max-width: 600px) {
+    .bottom-nav {
+        flex-direction: column;
+        padding: 1em 0.5em;
+    }
+    .bottom-nav button {
+        width: 100%;
+    }
+}
